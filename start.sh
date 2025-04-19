@@ -152,6 +152,6 @@ fi
 
 if [[ "$MODE" == "run" || "$MODE" == "full" ]]; then
   echo "Running via Mode: $MODE"
-  uvicorn main:app --host "$HOST" --port "$PORT" --forwarded-allow-ips '*' --loop "$UVICORN_LOOP"
+  uv run uvicorn main:app --host "$HOST" --port "$PORT" --forwarded-allow-ips '*' --loop "$UVICORN_LOOP"
 fi
 

@@ -121,11 +121,13 @@ def parse_frontmatter(content):
 
 
 def install_frontmatter_requirements(requirements):
+    print(f"[WARNING!] This pipelines submodule was modified in order to enable uv usage for the Galaxy Life Bot. The uv package manager is normally not supported and trying to install other pipelines and their dependencies with it will likely not work! Please consider 1. using a sparate pipelines instance for general pipeline usage or 2. providing the dependencies manually yourself and removing the requirements listed at the top of your pipeline.")
     if requirements:
         req_list = [req.strip() for req in requirements.split(",")]
         for req in req_list:
             print(f"Installing requirement: {req}")
             subprocess.check_call([sys.executable, "-m", "pip", "install", req])
+            #subprocess.check_call(["uv", "add", req])
     else:
         print("No requirements found in frontmatter.")
 
