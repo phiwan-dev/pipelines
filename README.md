@@ -1,3 +1,9 @@
+
+# What is different in this fork?
+This repository contains some changes to enable usage for the uv package manager in my other project https://github.com/phiwan-dev/gl-ai-txt .
+Note that this contains application-specific changes and does not enable general uv usage for all pipelines!
+Additionally, because the pipelines project does not have a versioning/tagged releases this repository yields as a sort of pin for the version.
+
 <p align="center">
   <a href="#"><img src="./docs/images/header.png" alt="Pipelines Logo"></a>
 </p>
